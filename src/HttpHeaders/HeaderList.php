@@ -88,6 +88,7 @@ class HeaderList
             'content-security-policy' => \A3020\HttpHeaders\Header\ContentSecurityPolicy::class,
             'referrer-policy' => \A3020\HttpHeaders\Header\ReferrerPolicy::class,
             'x-content-type-options' => \A3020\HttpHeaders\Header\XContentTypeOptions::class,
+            'permissions-policy' => \A3020\HttpHeaders\Header\PermissionsPolicy::class,
         ];
 
         if (array_key_exists($identifier, $map)) {

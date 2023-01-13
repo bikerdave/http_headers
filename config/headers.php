@@ -8,4 +8,5 @@ return [
     'content-security-policy' => [],
     'referrer-policy' => [],
     'x-content-type-options' => [],
+    'permissions-policy' => [],
 ];
