@@ -19,9 +19,11 @@ class DefaultHeader extends AbstractHeader
     {
         parent::fromPost($post);
 
-        $this->setValue($post['value']);
+        if (isset($post['value'])) {
+            $this->setValue($post['value']);
+        }
     }
-    
+
     public function toArray()
     {
         $array = parent::toArray();

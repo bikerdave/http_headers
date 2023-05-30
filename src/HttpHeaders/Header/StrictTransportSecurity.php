@@ -38,8 +38,14 @@ class StrictTransportSecurity extends DefaultHeader
         parent::fromPost($post);
 
         $this->setMaxAge($post['max_age']);
-        $this->setIncludeSubdomains($post['include_sub_domains']);
-        $this->setPreload($post['preload']);
+
+        if (isset($options['include_sub_domains'])) {
+            $this->setIncludeSubdomains($post['include_sub_domains']);
+        }
+
+        if (isset($options['preload'])) {
+            $this->setPreload($post['preload']);
+        }
     }
 
     /**
